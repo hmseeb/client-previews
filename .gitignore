@@ -116,7 +116,4 @@ out
 .yarn/install-state.gz
 .pnp.*
 
-# Agent
-.agent/
-.claude/
 .gemini/

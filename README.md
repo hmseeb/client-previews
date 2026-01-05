@@ -1,9 +1,3 @@
-# Client Previews
+# Green Hawaii Landscaping
 
-Each branch in this repo is a different client website preview.
-
-## URL Pattern
-`https://client-previews-git-[branch-name]-badaaas.vercel.app`
-
-## Active Previews
-- `green-hawaii` - Green Hawaii Landscaping
+Professional landscaping website for Green Hawaii.

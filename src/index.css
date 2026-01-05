@@ -22,3 +22,17 @@ html { scroll-behavior: smooth; }
 body { font-family: var(--font-body); color: #1A1A1A; line-height: 1.6; }
 h1, h2, h3, h4, h5, h6 { font-family: var(--font-display); line-height: 1.1; }
 .stat-number { font-family: var(--font-accent); }
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.animate-delay-100 { animation-delay: 0.1s; }
+.animate-delay-200 { animation-delay: 0.2s; }
+.animate-delay-300 { animation-delay: 0.3s; }
+.animate-delay-400 { animation-delay: 0.4s; }

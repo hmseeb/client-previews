@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Source+Sans+3:wght@400;600;700&family=Oswald:wght@500;600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-forest: #2D5A27;
+  --color-forest-dark: #1B3B1B;
+  --color-forest-light: #4A7C43;
+  --color-harvest: #D4A84B;
+  --color-harvest-dark: #B8923F;
+  --color-accent: #E85D04;
+  --color-sage: #5A6B5A;
+  --color-moss: #D1D9D1;
+  --color-stone: #9CA89C;
+  --color-cream: #F8FAF7;
+  
+  --font-display: 'Playfair Display', Georgia, serif;
+  --font-body: 'Source Sans 3', system-ui, sans-serif;
+  --font-accent: 'Oswald', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  color: #1A1A1A;
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  line-height: 1.1;
+}
+
+.stat-number {
+  font-family: var(--font-accent);
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse-gentle {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.02); }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+.animate-pulse-gentle {
+  animation: pulse-gentle 2s ease-in-out infinite;
+}
+
+.animation-delay-100 { animation-delay: 100ms; }
+.animation-delay-200 { animation-delay: 200ms; }
+.animation-delay-300 { animation-delay: 300ms; }
+.animation-delay-400 { animation-delay: 400ms; }
+
+.hero-gradient {
+  background: linear-gradient(135deg, rgba(27, 59, 27, 0.85) 0%, rgba(27, 59, 27, 0.6) 50%, rgba(27, 59, 27, 0.4) 100%);
+}
+
+.leaf-pattern {
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 5c-8.284 0-15 6.716-15 15 0 8.284 15 35 15 35s15-26.716 15-35c0-8.284-6.716-15-15-15zm0 20a5 5 0 1 1 0-10 5 5 0 0 1 0 10z' fill='%23ffffff' fill-opacity='0.03'/%3E%3C/svg%3E");
+}

@@ -1,6 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Source+Sans+3:wght@400;600;700&family=Oswald:wght@500;600&display=swap');
 @import "tailwindcss";
 
 @theme {
-  --color-primary: #6366f1;
-  --color-dark: #0f172a;
+  --color-forest: #2D5A27;
+  --color-forest-dark: #1B3B1B;
+  --color-forest-light: #4A7C43;
+  --color-harvest: #D4A84B;
+  --color-harvest-dark: #B8923F;
+  --color-accent: #E85D04;
+  --color-sage: #5A6B5A;
+  --color-moss: #D1D9D1;
+  --color-stone: #9CA89C;
+  --color-cream: #F8FAF7;
+
+  --font-display: 'Playfair Display', Georgia, serif;
+  --font-body: 'Source Sans 3', system-ui, sans-serif;
+  --font-accent: 'Oswald', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  color: #1A1A1A;
+  line-height: 1.6;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-display);
+  line-height: 1.1;
+}
+
+.stat-number {
+  font-family: var(--font-accent);
 }

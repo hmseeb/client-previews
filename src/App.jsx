@@ -18,6 +18,14 @@ const BUSINESS = {
   reviews: '139',
 }
 
+const HERO_IMAGE = 'https://images.unsplash.com/photo-1558904541-efa843a96f01?w=1920&q=80'
+const GALLERY_IMAGES = [
+  'https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?w=600&q=80',
+  'https://images.unsplash.com/photo-1598902108854-10e335adac99?w=600&q=80',
+  'https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=600&q=80',
+  'https://images.unsplash.com/photo-1591857177580-dc82b9ac4e1e?w=600&q=80',
+]
+
 const SERVICES = [
   { icon: Droplets, title: 'Irrigation Leak Repair', description: 'Emergency and scheduled repair for sprinkler systems, drip irrigation, PVC, black poly, and backflow/PVB replacement.' },
   { icon: Wrench, title: 'Sprinkler System Service', description: 'Complete sprinkler head replacement, timer/clock installation, valve repair, and system programming.' },
@@ -124,7 +132,7 @@ function App() {
       {/* Hero Section */}
       <section className="relative min-h-[600px] flex items-center">
         <div className="absolute inset-0">
-          <img src="/images/hero.png" alt="Professional landscaping in Las Vegas" className="w-full h-full object-cover" />
+          <img src={HERO_IMAGE} alt="Professional landscaping in Las Vegas" className="w-full h-full object-cover" />
           <div className="absolute inset-0 bg-gradient-to-r from-forest-dark/90 via-forest-dark/70 to-transparent"></div>
         </div>
 
@@ -263,11 +271,11 @@ function App() {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
-            {[1, 2, 3, 4].map((i) => (
+            {GALLERY_IMAGES.map((img, i) => (
               <div key={i} className="relative group overflow-hidden rounded-xl shadow-lg">
                 <img
-                  src={`/images/gallery-${i}.png`}
-                  alt={`Project ${i}`}
+                  src={img}
+                  alt={`Project ${i + 1}`}
                   className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500"
                 />
                 <div className="absolute inset-0 bg-forest-dark/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">

@@ -29,12 +29,13 @@ description: Generate and deploy a client website preview based on business info
 
 3.  **Generate Assets (Parallel)**
 
-    I will generate the necessary images.
-    *   **Hero Image**: A professional scene matching the business type.
-    *   **Gallery Images**: 4-6 realistic project photos.
+    I will generate the necessary images using `generate_image` tool:
+    *   **Hero Image**: A professional scene matching the business type. Save to `public/images/hero.png`.
+    *   **Gallery Images**: 4 realistic project photos. Save to `public/images/gallery-1.png` through `public/images/gallery-4.png`.
 
-    I will use `generate_image` for this.
-    *   **Fallback**: If image generation fails or produces poor results, I will use the relevant Unsplash URLs provided in `.claude/skills/fallback-images.md`.
+    **CRITICAL**: After generating images, copy them from the generated path to the `public/images/` directory. Create the directory if it does not exist.
+    
+    *   **Fallback**: ONLY if image generation explicitly fails, use the relevant Unsplash URLs provided in `.claude/skills/fallback-images.md`.
 
 4.  **Scaffold & Implement Website**
 
